@@ -1,0 +1,98 @@
+/* Estilos para a página Automação Industrial */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--header-background);
+  color: var(--header-text-color);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+header h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+main {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  background: var(--section-background);
+  padding: 25px;
+  border-radius: var(--section-border-radius);
+  box-shadow: var(--section-box-shadow);
+  margin-bottom: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 5px solid var(--primary-color);
+}
+
+section:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+section p,
+section ul {
+  color: var(--text-color);
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+section ul {
+  list-style: disc;
+  padding-left: 25px;
+}
+
+footer {
+  background: var(--footer-background);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  border-top: 3px solid var(--primary-color);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  section h2 {
+    font-size: 1.5em;
+  }
+}
