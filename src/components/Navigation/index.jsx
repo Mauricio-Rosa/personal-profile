@@ -1,33 +1,41 @@
-import React from 'react';
+import { Link } from "react-router-dom";
 import './styles.css';
-import { MdHome, MdInfo, MdBuild, MdContactMail } from 'react-icons/md';
+import { FaUserGraduate, FaTools, FaCode } from "react-icons/fa";
+import { SiRockwellautomation } from "react-icons/si";
+import { IoCallSharp } from "react-icons/io5";
 
 function Navigation() {
   return (
     <nav className="navigation">
       <ul className="nav-list">
         <li className="nav-item">
-          <a href="#home" className="nav-link">
-            <MdHome className="nav-icon" />
-            <span className="nav-label">Home</span>
+          <Link to="/personal-profile/about" className="nav-link">
+            <FaUserGraduate className="nav-icon" />
+            <span className="nav-label">Sobre</span>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <a href="#automation" className="nav-link">
+            <SiRockwellautomation className="nav-icon" />
+            <span className="nav-label">Automação</span>
           </a>
         </li>
         <li className="nav-item">
-          <a href="#about" className="nav-link">
-            <MdInfo className="nav-icon" />
-            <span className="nav-label">About</span>
+          <a href="#agiles-tools" className="nav-link">
+            <FaTools className="nav-icon" />
+            <span className="nav-label">Ágeis</span>
           </a>
         </li>
         <li className="nav-item">
-          <a href="#services" className="nav-link">
-            <MdBuild className="nav-icon" />
-            <span className="nav-label">Services</span>
+          <a href="#programming" className="nav-link">
+            <FaCode className="nav-icon" />
+            <span className="nav-label">Programação</span>
           </a>
         </li>
         <li className="nav-item">
           <a href="#contact" className="nav-link">
-            <MdContactMail className="nav-icon" />
-            <span className="nav-label">Contact</span>
+            <IoCallSharp className="nav-icon" />
+            <span className="nav-label">Contato</span>
           </a>
         </li>
       </ul>

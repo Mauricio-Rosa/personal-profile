@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p className="footer-name">Desenvolvido por Maurício Rosa</p>
+        <p className="footer-name">Desenvolvido por mim</p>
         
         <div className="footer-social">
           <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">

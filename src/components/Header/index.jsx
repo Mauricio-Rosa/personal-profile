@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header className="header">
-      <h1 className="header-title">Maurício Freire Rosa</h1>
+      <h1 className="header-title">Perfil Profissional</h1>
 
       <label className="switch" aria-label="Alternar tema claro e escuro">
         <input

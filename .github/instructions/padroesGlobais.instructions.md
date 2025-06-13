@@ -35,21 +35,19 @@ pages
 
 não crie pastas sem fazer a varredura antes para evitar de criar pastas com funções iguais, por exemplo: Se existir a pasta page, não crie uma pastas chamas pages, paginas, paginas_home etc...
 
+- Utilizar **CSS custom properties** com `:root` e `[data-theme=dark]`
+- Evitar repetição de `transition:` usando `--transition`:
+- Layout sempre **responsivo** com breakpoint primário em `480px`
+- Componentes como `.header`, `.footer` e `.navigation` devem:
 
-* Utilizar **CSS custom properties** com `:root` e `[data-theme=dark]`
-* Evitar repetição de `transition:` usando `--transition`:
+  - Usar `max-width` e `margin: 0 auto` para centralização
+  - Ajustar `flex-direction` de `row` para `column` em telas pequenas
+  - Respeitar padding interno (ex: `padding: 1rem 2rem`)
 
-
-* Layout sempre **responsivo** com breakpoint primário em `480px`
-* Componentes como `.header`, `.footer` e `.navigation` devem:
-
-  * Usar `max-width` e `margin: 0 auto` para centralização
-  * Ajustar `flex-direction` de `row` para `column` em telas pequenas
-  * Respeitar padding interno (ex: `padding: 1rem 2rem`)
-* 
-* **Funções nomeadas como PascalCase** : `function Header() { ... }`
-* **Exportar no final** com `export default NomeDoComponente;`
-* Usar `useEffect` para persistência de dados em `localStorage`
-* Evitar múltiplos `useState` desnecessários; agrupar se fizer sentido
-* Usar `data-theme` no `html` para aplicar tema global:
-* document.documentElement.setAttribute('data-theme', 'dark');
+-
+- **Funções nomeadas como PascalCase** : `function Header() { ... }`
+- **Exportar no final** com `export default NomeDoComponente;`
+- Usar `useEffect` para persistência de dados em `localStorage`
+- Evitar múltiplos `useState` desnecessários; agrupar se fizer sentido
+- Usar `data-theme` no `html` para aplicar tema global:
+- document.documentElement.setAttribute('data-theme', 'dark');
