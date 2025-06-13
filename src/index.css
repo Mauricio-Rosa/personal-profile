@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap');
+
 :root {
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -7,6 +10,26 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+    /* Fontes principais */
+  --font-family-base: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Poppins', sans-serif;
+  --font-size-base: clamp(1rem, 2vw, 1.125rem);
+
+  /* Tamanhos de fonte */
+  --font-xs: clamp(0.75rem, 1.5vw, 0.875rem);
+  --font-sm: clamp(0.875rem, 2vw, 1rem);
+  --font-base: clamp(1rem, 2.5vw, 1.125rem);
+  --font-lg: clamp(1.125rem, 3vw, 1.25rem);
+  --font-xl: clamp(1.25rem, 4vw, 1.5rem);
+  --font-2xl: clamp(1.5rem, 5vw, 1.875rem);
+  --font-3xl: clamp(1.875rem, 6vw, 2.25rem);
+
+  /* Pesos */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
 
   /* === Cores primárias (base LinkedIn) === */
   --color-primary: #0a66c2;
@@ -41,6 +64,7 @@
   --box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
+
 [data-theme="dark"] {
   --color-bg: #121212;
   --color-text: #e4e4e7;
@@ -60,5 +84,5 @@
 /* Aplica transição suave para body e html, que recebem as cores base */
 html,
 body {
-  transition: var(--box-shadow);
+  transition: var(--transition);
 }
