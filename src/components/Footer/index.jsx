@@ -1,4 +1,5 @@
 import './styles.css';
+import LINKS from "@/constants/ExternalLinks";
 import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
@@ -8,19 +9,19 @@ export default function Footer() {
         <p className="footer-name">Desenvolvido por mim</p>
         
         <div className="footer-social">
-          <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+          <a href={LINKS.WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
             <FaWhatsapp />
           </a>
-          <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href={LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href={LINKS.GITHUB} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub />
           </a>
-          <a href="mailto:seu@email.com" aria-label="Email">
+          <a href={LINKS.INSTAGRAM} aria-label="Instagram">
             <FaInstagram />
           </a>
-          <a href="mailto:seu@email.com" aria-label="Email">
+          <a href={LINKS.EMAIL} aria-label="Email">
             <FaEnvelope />
           </a>
         </div>

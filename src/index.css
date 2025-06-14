@@ -78,7 +78,7 @@
   color: var(--color-text);
   background-color: var(--color-bg);
 
-  transition: var(--box-shadow);
+  transition: var(--transition);
 }
 
 /* Aplica transição suave para body e html, que recebem as cores base */

@@ -1,40 +1,73 @@
+// src/pages/About/About.jsx
 import "./styles.css";
-import { getExperienceTime } from "../../utils/experienceCounter";
+import PI from "@/constants/personalInfo";
+import React, { useEffect, useRef } from "react";
+import { getExperienceTime } from "@/utils/experienceCounter";
 
 function About() {
   const experience = getExperienceTime();
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    const imgElement = imgRef.current;
+    if (!imgElement) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          imgElement.classList.add("animate-scale-up-hor-left");
+          observer.unobserve(imgElement);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(imgElement);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="about-section">
       <div className="about-card">
         <div className="about-header">
           <img
-            src="src\assets\favicon\android-chrome-512x512.png"
+            src="src/assets/favicon/android-chrome-512x512.png"
             alt="Foto de perfil"
             className="about-photo"
           />
           <div className="about-info">
-            <h1 className="about-name">{import.meta.env.VITE_NAME}</h1>
-          <h2 className="about-title">{import.meta.env.VITE_CURRENT_ROLE} na {import.meta.env.VITE_CURRENT_COMPANY}</h2>
-            <p className="about-location">{import.meta.env.VITE_CURRENT_LOCATION}</p>
+            <h1 className="about-name">{PI.NAME}</h1>
+            <h2 className="about-title">
+              {PI.CURRENT_ROLE} na{" "}
+              {PI.CURRENT_COMPANY}
+            </h2>
+            <p className="about-location">
+              {PI.CURRENT_LOCATION}
+            </p>
           </div>
         </div>
 
         <div className="about-summary">
           <p>
-            Apresento-me como um profissional com mais de {experience} de experiência
-            nas áreas de automação e engenharia elétrica, com habilidades em
-            ferramentas como IBA, PIMS, AutoCAD, MS Project, Python, VMware,
-            entre outras. Tenho conhecimento em gestão de projetos e qualidade,
-            incluindo indicadores de desempenho (KPIs), 5S, Kanban, planners
-            etc.
+            Apresento-me como um profissional com mais de {experience} de
+            experiência nas áreas de automação e engenharia elétrica, com
+            habilidades em ferramentas como IBA, PIMS, AutoCAD, MS Project,
+            Python, VMware, entre outras. Tenho conhecimento em gestão de
+            projetos e qualidade, incluindo indicadores de desempenho (KPIs),
+            5S, Kanban, planners etc.
             <br />
             <br />
-            Atualmente, atuo como {import.meta.env.VITE_CURRENT_ROLE} na {import.meta.env.VITE_CURRENT_COMPANY}, no setor
-            de logística portuária de minério de ferro, sendo responsável pelo
-            detalhamento e engenharia de soluções.
+            Atualmente, atuo como {PI.CURRENT_ROLE} na{" "}
+            {PI.CURRENT_COMPANY}, no setor de logística
+            portuária de minério de ferro, sendo responsável pelo detalhamento e
+            engenharia de soluções.
             <br />
-            <br />
+            <img
+              ref={imgRef}
+              className="img-abraman"
+              src="src/assets/premio abraman.jpg"
+              alt="Premiação ABRAMAN"
+            />
             Fui premiado com o terceiro lugar na convenção nacional de
             manutenção de 2024 da Associação Brasileira de Manutenção (ABRAMAN),
             referente ao ano de 2023, com o projeto "Controle de fluxo e
@@ -61,7 +94,56 @@ function About() {
             como posso contribuir com sua equipe.
           </p>
         </div>
-      <img className="img-signature" src="src\assets\assinatura.png" alt="" srcset="" />
+
+        <img
+          className="img-signature"
+          src="src/assets/assinatura.png"
+          alt="Assinatura"
+        />
+
+        <section className="funnels">
+          <div className="funnel">
+            <h3>Automação Industrial</h3>
+            <p>
+              Conheça meus projetos com inversores, CLPs e sistemas como IBA e
+              PIMS.
+            </p>
+            <button
+              className="cta-button"
+              onClick={() => (window.location.href = "/automation")}
+            >
+              Explorar automação
+            </button>
+          </div>
+
+          <div className="funnel">
+            <h3>Métodos Ágeis</h3>
+            <p>
+              Experiência com 5S, Kanban, gestão de indicadores e cultura de
+              melhoria contínua.
+            </p>
+            <button
+              className="cta-button"
+              onClick={() => (window.location.href = "/agile")}
+            >
+              Ver minha atuação ágil
+            </button>
+          </div>
+
+          <div className="funnel">
+            <h3>Programação & Soluções Digitais</h3>
+            <p>
+              Criação de soluções em Python, React, Power Apps e automações com
+              Power Automate.
+            </p>
+            <button
+              className="cta-button"
+              onClick={() => (window.location.href = "/code")}
+            >
+              Acessar soluções digitais
+            </button>
+          </div>
+        </section>
       </div>
     </section>
   );
