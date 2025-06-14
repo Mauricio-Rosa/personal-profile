@@ -1,7 +1,7 @@
 // src/pages/Automacao/index.jsx
 import "./styles.css";
 
-function Automacao() {
+function Automation() {
   return (
     <div>
       <p>Automacao</p>
@@ -9,4 +9,4 @@ function Automacao() {
   );
 }
 
-export default Automacao;
+export default Automation;

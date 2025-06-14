@@ -1,5 +1,5 @@
 // src/App.jsx
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 
 // Componentes de layout
 import Header from "./components/Header";

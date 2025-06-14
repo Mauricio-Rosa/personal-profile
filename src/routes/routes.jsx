@@ -1,17 +1,35 @@
 import About from "@/pages/About";
-import Automacao from "@/pages/Automacao";
+import Automacao from "@/pages/Automation";
+import Agile from "@/pages/Agile";
+import Programming from "@/pages/Programming";
+import Contact from "@/pages/Contact";
 
 // Rotas centralizadas
 const ROUTES = {
   ABOUT: {
-    path: "/personal-profile/about",
+    path: "/",
     element: <About />,
     label: "Sobre",
   },
   AUTOMACAO: {
-    path: "/personal-profile/automacao",
+    path: "/automation",
     element: <Automacao />,
     label: "Automação",
+  },
+  AGILE: {
+    path: "/agile",
+    element: <Agile />,
+    label: "Agile",
+  },
+  PROGRAMMING: {
+    path: "/programming",
+    element: <Programming />,
+    label: "Programming",
+  },
+  CONTACT: {
+    path: "/contact",
+    element: <Contact />,
+    label: "Contact",
   },
   LOGOUT: {
     path: "/logout",

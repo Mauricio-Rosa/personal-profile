@@ -22,22 +22,22 @@ function Navigation() {
           </Link>
         </li>
         <li className="nav-item">
-          <a href="#agiles-tools" className="nav-link">
+          <Link to={ROUTES.AGILE.path} className="nav-link">
             <FaTools className="nav-icon" />
             <span className="nav-label">Ágeis</span>
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="#programming" className="nav-link">
+          <Link to={ROUTES.PROGRAMMING.path} className="nav-link">
             <FaCode className="nav-icon" />
             <span className="nav-label">Programação</span>
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="#contact" className="nav-link">
+          <Link to={ROUTES.CONTACT.path} className="nav-link">
             <IoCallSharp className="nav-icon" />
             <span className="nav-label">Contato</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

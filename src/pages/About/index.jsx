@@ -1,12 +1,20 @@
 // src/pages/About/About.jsx
 import "./styles.css";
-import PI from "@/constants/personalInfo";
+import { useNavigate } from "react-router-dom";
 import React, { useEffect, useRef } from "react";
+
+import PI from "@/constants/personalInfo";
 import { getExperienceTime } from "@/utils/experienceCounter";
+
+import profileImage from "@/assets/favicon/android-chrome-512x512.png";
+import abramanImage from "@/assets/premio abraman.jpg";
+import assinatura from "@/assets/assinatura.png";
 
 function About() {
   const experience = getExperienceTime();
   const imgRef = useRef(null);
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const imgElement = imgRef.current;
@@ -31,7 +39,7 @@ function About() {
       <div className="about-card">
         <div className="about-header">
           <img
-            src="src/assets/favicon/android-chrome-512x512.png"
+            src={profileImage}
             alt="Foto de perfil"
             className="about-photo"
           />
@@ -65,7 +73,7 @@ function About() {
             <img
               ref={imgRef}
               className="img-abraman"
-              src="src/assets/premio abraman.jpg"
+              src={abramanImage}
               alt="Premiação ABRAMAN"
             />
             Fui premiado com o terceiro lugar na convenção nacional de
@@ -97,7 +105,7 @@ function About() {
 
         <img
           className="img-signature"
-          src="src/assets/assinatura.png"
+          src={assinatura}
           alt="Assinatura"
         />
 
@@ -110,7 +118,7 @@ function About() {
             </p>
             <button
               className="cta-button"
-              onClick={() => (window.location.href = "/automation")}
+              onClick={() => navigate("/automation")}
             >
               Explorar automação
             </button>
@@ -124,7 +132,7 @@ function About() {
             </p>
             <button
               className="cta-button"
-              onClick={() => (window.location.href = "/agile")}
+              onClick={() => navigate("/agile")}
             >
               Ver minha atuação ágil
             </button>
@@ -138,7 +146,7 @@ function About() {
             </p>
             <button
               className="cta-button"
-              onClick={() => (window.location.href = "/code")}
+              onClick={() => navigate("/code")}
             >
               Acessar soluções digitais
             </button>
