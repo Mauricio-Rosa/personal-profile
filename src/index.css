@@ -38,7 +38,9 @@
 
   /* === Tema claro (padrão) === */
   --color-bg: #ffffff;
+  --color-bg-button: #0a66c2;
   --color-text: #202124;
+  --color-text-button: #f3f4f6;
   --color-text-light: #ffffff;
   --color-muted: #6b7280;
   --color-border: #d1d5db;
@@ -47,8 +49,9 @@
   --color-hover-bg: #edf5fc;
 
   /* === Feedback === */
+  --color-info: #0a66c2; /* Azul claro */
   --color-success: #34d399;
-  --color-error: #f87171;
+  --color-error: #dc2626;
   --color-warning: #facc15;
 
   /* Atributo nativo de sugestão, pode ser mantido */
@@ -67,7 +70,9 @@
 
 [data-theme="dark"] {
   --color-bg: #121212;
+  --color-bg-button: #2a2a2a;
   --color-text: #e4e4e7;
+  --color-text-button: #f3f4f6;
   --color-muted: #a1a1aa;
   --color-border: #2a2a2a;
   --color-accent: #1e1e1e;
