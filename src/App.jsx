@@ -5,6 +5,7 @@ import { HashRouter as Router } from "react-router-dom";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import SearchInput from "@/components/SearchInput";
 
 // Importa o AppRoutes centralizado
 import AppRoutes from "./routes";
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <Header />
       <Navigation />
+      <SearchInput />
       <main>
         <AppRoutes />
       </main>

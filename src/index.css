@@ -40,17 +40,20 @@
   --color-bg: #ffffff;
   --color-bg-button: #0a66c2;
   --color-text: #202124;
+  --color-text-link: #dc2626;
   --color-text-button: #f3f4f6;
   --color-text-light: #ffffff;
   --color-muted: #6b7280;
   --color-border: #d1d5db;
+  --color--focus:#6b7280;
+  --color-border-focus:#0a66c2;
   --color-accent: #f3f4f6;
   --color-hover: #0a66c2;
   --color-hover-bg: #edf5fc;
 
   /* === Feedback === */
   --color-info: #0a66c2; /* Azul claro */
-  --color-success: #34d399;
+  --color-success: #35c20a;
   --color-error: #dc2626;
   --color-warning: #facc15;
 
@@ -72,9 +75,12 @@
   --color-bg: #121212;
   --color-bg-button: #2a2a2a;
   --color-text: #e4e4e7;
+  --color-text-link: #35c20a;
   --color-text-button: #f3f4f6;
   --color-muted: #a1a1aa;
   --color-border: #2a2a2a;
+  --color--focus:#1f2937;
+  --color-border-focus:#e4e4e7;
   --color-accent: #1e1e1e;
   --color-hover: #60a5fa;
   --color-hover-bg: #1f2937;

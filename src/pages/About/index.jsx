@@ -10,6 +10,8 @@ import profileImage from "@/assets/favicon/android-chrome-512x512.png";
 import abramanImage from "@/assets/premio abraman.jpg";
 import assinatura from "@/assets/assinatura.png";
 
+import Button from "@/components/Button";
+
 function About() {
   const experience = getExperienceTime();
   const imgRef = useRef(null);
@@ -55,7 +57,7 @@ function About() {
           </div>
         </div>
 
-        <div className="about-summary">
+        <div className="about-summary" id="content">
           <p>
             Apresento-me como um profissional com mais de {experience} de
             experiência nas áreas de automação e engenharia elétrica, com
@@ -116,12 +118,12 @@ function About() {
               Conheça meus projetos com inversores, CLPs e sistemas como IBA e
               PIMS.
             </p>
-            <button
-              className="cta-button"
-              onClick={() => navigate("/automation")}
-            >
-              Explorar automação
-            </button>
+
+            <Button
+            type = 'button'
+            text= "Ver mais"
+            onClick={() => navigate("/automation")}
+            />
           </div>
 
           <div className="funnel">
@@ -130,12 +132,11 @@ function About() {
               Experiência com 5S, Kanban, gestão de indicadores e cultura de
               melhoria contínua.
             </p>
-            <button
-              className="cta-button"
-              onClick={() => navigate("/agile")}
-            >
-              Ver minha atuação ágil
-            </button>
+            <Button
+            type = 'button'
+            text= "Ver mais"
+            onClick={() => navigate("/agile")}
+            />
           </div>
 
           <div className="funnel">
@@ -144,12 +145,11 @@ function About() {
               Criação de soluções em Python, React, Power Apps e automações com
               Power Automate.
             </p>
-            <button
-              className="cta-button"
-              onClick={() => navigate("/code")}
-            >
-              Acessar soluções digitais
-            </button>
+            <Button
+            type = 'button'
+            text= "Ver mais"
+            onClick={() => navigate("/code")}
+            />
           </div>
         </section>
       </div>
