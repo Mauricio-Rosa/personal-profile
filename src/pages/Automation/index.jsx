@@ -1,4 +1,5 @@
 // src/pages/Automacao/index.jsx
+import useHelmetMeta from "@/hooks/useHelmetMeta";
 import Article from "@/components/Article";
 
 import Microscópio from "@/assets/a_webp/microscópio.webp";
@@ -8,7 +9,14 @@ import PowerMeter from "@/assets/a_webp/Power Meter.webp";
 import "./styles.css";
 
 function Automation() {
+  const helmet = useHelmetMeta({
+    title: "Automation | Mauricio F.R.",
+    description:
+      "Testes em fibras ópticas são essenciais para garantir a qualidade e confiabilidade das conexões ópticas, utilizando ferramentas como microscópios, lasers e power meters.",
+  });
   return (
+    <>
+    {helmet}
     <div id="content">
       <Article
         title="Testes em fibras ópticas"
@@ -20,6 +28,7 @@ function Automation() {
         "
       />
     </div>
+    </>
   );
 }
 

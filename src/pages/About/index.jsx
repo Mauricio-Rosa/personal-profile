@@ -2,6 +2,7 @@
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useRef } from "react";
+import useHelmetMeta from "@/hooks/useHelmetMeta";
 
 import PI from "@/constants/personalInfo";
 import { getExperienceTime } from "@/utils/experienceCounter";
@@ -17,6 +18,11 @@ function About() {
   const imgRef = useRef(null);
   const navigate = useNavigate();
 
+  const helmet = useHelmetMeta({
+    title: "About | Mauricio F.R.",
+    description:
+      "Conheça a trajetória profissional de Maurício Freire Rosa, especialista em automação, engenharia elétrica e desenvolvimento de soluções digitais com Python, javascript, React e Power Platform.",
+  });
 
   useEffect(() => {
     const imgElement = imgRef.current;
@@ -37,6 +43,9 @@ function About() {
   }, []);
 
   return (
+    <>
+    {helmet}
+      
     <section className="about-section">
       <div className="about-card">
         <div className="about-header">
@@ -154,6 +163,7 @@ function About() {
         </section>
       </div>
     </section>
+    </>
   );
 }
 

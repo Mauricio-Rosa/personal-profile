@@ -1,4 +1,5 @@
 // src/pages/Automacao/index.jsx
+import useHelmetMeta from "@/hooks/useHelmetMeta";
 import React, { useRef, useEffect, useState } from "react";
 import {
   FaLinkedin,
@@ -15,6 +16,12 @@ import LINKS from "@/constants/ExternalLinks";
 import "./styles.css";
 
 function Contact() {
+    const helmet = useHelmetMeta({
+    title: "Contact | Mauricio F.R.",
+    description:
+      "Conheça a trajetória profissional de Maurício Freire Rosa, especialista em automação, engenharia elétrica e desenvolvimento de soluções digitais com Python, javascript, React e Power Platform.",
+  });
+
   const form = useRef();
   const closeModal = () => setModalOpen(false);
   const [isModalOpen, setModalOpen] = useState(false);
@@ -60,6 +67,8 @@ function Contact() {
   };
 
   return (
+    <>
+    {helmet}
     <section className="contact">
       {/* Título da seção */}
       <h1 className="contact-title">Entre em Contato</h1>
@@ -177,6 +186,7 @@ function Contact() {
         <p>{modalContent.message}</p>
       </Modal>
     </section>
+    </>
   );
 }
 

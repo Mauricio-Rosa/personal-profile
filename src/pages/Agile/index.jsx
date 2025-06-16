@@ -1,5 +1,6 @@
 // src/pages/Automacao/index.jsx
 import "./styles.css";
+import useHelmetMeta from "@/hooks/useHelmetMeta";
 import Article from "@/components/Article";
 
 import MANUT30_1 from "@/assets/a_webp/MANUT30_1.webp";
@@ -11,7 +12,14 @@ import MANUT30_6 from "@/assets/a_webp/MANUT30_6.webp";
 import MANUT30_7 from "@/assets/a_webp/MANUT30_7.webp";
 
 function Agile() {
+  const helmet = useHelmetMeta({
+    title: "Agile | Mauricio F.R.",
+    description:
+      "Conheça o aplicativo Manutenção 30, uma solução inovadora para otimizar a gestão de manutenção na Ferroport, desenvolvida por mim. Alem disso, descubra como ele melhora a eficiência operacional e a qualidade no atendimento às demandas de manutenção.",
+  });
   return (
+    <>
+    {helmet}
     <div>
       <Article
         title="Manutenção 30!"
@@ -80,6 +88,7 @@ function Agile() {
         }
       />
     </div>
+    </>
   );
 }
 
