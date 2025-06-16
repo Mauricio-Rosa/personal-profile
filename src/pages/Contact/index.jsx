@@ -1,9 +1,17 @@
 // src/pages/Automacao/index.jsx
 import React, { useRef, useEffect, useState } from "react";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaWhatsapp,
+  FaInstagram,
+} from "react-icons/fa";
 import Button from "@/components/Button";
 import Modal from "@/components/Modal";
 import emailjs from "emailjs-com";
 import PI from "@/constants/personalInfo";
+import LINKS from "@/constants/ExternalLinks";
 import "./styles.css";
 
 function Contact() {
@@ -104,8 +112,47 @@ function Contact() {
 
       {/* Informações de contato direto */}
       <div className="contact-info">
-        <p>Email: {PI.EMAIL}</p>
-        <p>Telefone: {PI.PHONE}</p>
+        <h1>Ou se preferir, pelas redes sociais</h1>
+        <div className="social-links">
+          <a
+            className="a-contact-info"
+            href={LINKS.WHATSAPP}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Whatsapp"
+          >
+            <FaWhatsapp className="contact-icon" />
+            <span>Whatsapp</span>
+          </a>
+          <a
+            className="a-contact-info"
+            href={LINKS.LINKEDIN}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin className="contact-icon" />
+            <span>Linkedin</span>
+          </a>
+          <a
+            className="a-contact-info"
+            href={LINKS.GITHUB}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub className="contact-icon" />
+            <span>Github</span>
+          </a>
+          <a
+            className="a-contact-info"
+            href={LINKS.INSTAGRAM}
+            aria-label="Instagram"
+          >
+            <FaInstagram className="contact-icon" />
+            <span>Instagram</span>
+          </a>
+        </div>
       </div>
 
       {/* Mapa de localização */}

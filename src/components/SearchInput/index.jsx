@@ -63,11 +63,6 @@ function SearchInput() {
                   text= "Pesquisar"
                   onClick={handleSearch}
                   />
-      <Button
-                  type = 'button'
-                  text= "Limpar"
-                  onClick={handleClear}
-                  />
     </div>
   );
 }
