@@ -2,13 +2,13 @@
 import "./styles.css";
 import Article from "@/components/Article";
 
-import MANUT30_1 from "@/assets/Agiles/Manut30/MANUT30_1.png";
-import MANUT30_2 from "@/assets/Agiles/Manut30/MANUT30_2.png";
-import MANUT30_3 from "@/assets/Agiles/Manut30/MANUT30_3.jpeg";
-import MANUT30_4 from "@/assets/Agiles/Manut30/MANUT30_4.jpeg";
-import MANUT30_5 from "@/assets/Agiles/Manut30/MANUT30_5.jpeg";
-import MANUT30_6 from "@/assets/Agiles/Manut30/MANUT30_6.jpeg";
-import MANUT30_7 from "@/assets/Agiles/Manut30/MANUT30_7.jpeg";
+import MANUT30_1 from "@/assets/a_webp/MANUT30_1.webp";
+import MANUT30_2 from "@/assets/a_webp/MANUT30_2.webp";
+import MANUT30_3 from "@/assets/a_webp/MANUT30_3.webp";
+import MANUT30_4 from "@/assets/a_webp/MANUT30_4.webp";
+import MANUT30_5 from "@/assets/a_webp/MANUT30_5.webp";
+import MANUT30_6 from "@/assets/a_webp/MANUT30_6.webp";
+import MANUT30_7 from "@/assets/a_webp/MANUT30_7.webp";
 
 function Agile() {
   return (

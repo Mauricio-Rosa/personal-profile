@@ -6,9 +6,9 @@ import React, { useEffect, useRef } from "react";
 import PI from "@/constants/personalInfo";
 import { getExperienceTime } from "@/utils/experienceCounter";
 
-import profileImage from "@/assets/favicon/android-chrome-512x512.png";
-import abramanImage from "@/assets/premio abraman.jpg";
-import assinatura from "@/assets/assinatura.png";
+import profileImage from "@/assets/a_webp/android-chrome-512x512.webp";
+import abramanImage from "@/assets/a_webp/premio abraman.webp";
+import assinatura from "@/assets/a_webp/assinatura.webp";
 
 import Button from "@/components/Button";
 

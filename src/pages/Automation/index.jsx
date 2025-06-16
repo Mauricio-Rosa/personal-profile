@@ -1,11 +1,9 @@
 // src/pages/Automacao/index.jsx
-import Modal from "@/components/Modal";
-import Button from "@/components/Button";
 import Article from "@/components/Article";
 
-import Microscópio from "@/assets/fibraOptica/microscópio.jpeg";
-import Laser from "@/assets/fibraOptica/laser.jpg";
-import PowerMeter from "@/assets/fibraOptica/Power Meter.jpg";
+import Microscópio from "@/assets/a_webp/microscópio.webp";
+import Laser from "@/assets/a_webp/laser.webp";
+import PowerMeter from "@/assets/a_webp/Power Meter.webp";
 
 import "./styles.css";
 

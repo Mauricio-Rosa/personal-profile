@@ -2,15 +2,15 @@
 import Article from "@/components/Article";
 import "./styles.css";
 
-import Analise from "@/assets/LFMPro/analise.png";
-import Dashboard from "@/assets/LFMPro/dashboard.png";
-import UploadArquivos from "@/assets/LFMPro/uploadArquivos.png";
-import Variaveis from "@/assets/LFMPro/variaveis.png";
+import Analise from "@/assets/a_webp/analise.webp";
+import Dashboard from "@/assets/a_webp/dashboard.webp";
+import UploadArquivos from "@/assets/a_webp/uploadArquivos.webp";
+import Variaveis from "@/assets/a_webp/variaveis.webp";
 
-import ITR_GEN1 from "@/assets/ITRGenerator/Inicio.png";
-import ITR_GEN2 from "@/assets/ITRGenerator/exemploEtapa.png";
-import ITR_GEN3 from "@/assets/ITRGenerator/manualIncorporado.png";
-import ITR_GEN4 from "@/assets/ITRGenerator/selecao.png";
+import ITR_GEN1 from "@/assets/a_webp/Inicio.webp";
+import ITR_GEN2 from "@/assets/a_webp/exemploEtapa.webp";
+import ITR_GEN3 from "@/assets/a_webp/manualIncorporado.webp";
+import ITR_GEN4 from "@/assets/a_webp/selecao.webp";
 
 function Programming() {
   return (
